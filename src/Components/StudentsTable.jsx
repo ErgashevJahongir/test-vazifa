@@ -166,7 +166,7 @@ export const StudentEdit = ({ studentId }) => {
                 console.log(err);
             });
 
-        navigate('/students');
+        isEdited = false;
     };
 
     return (
@@ -374,7 +374,7 @@ const StudentsTable = ({ setStudentId }) => {
                         console.log(err);
                     });
             }, 5000);
-        }, 3000);
+        }, 1000);
     }, []);
 
     const Edited = (id) => {
@@ -509,7 +509,7 @@ const StudentsTable = ({ setStudentId }) => {
                 <Link to="/student" className="create">
                     Student create
                 </Link>
-                <h2>Students Table</h2>
+                <h2 className="students">Students Table</h2>
                 <Form form={form} component={false}>
                     <Table
                         bordered

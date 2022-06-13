@@ -125,7 +125,7 @@ const Student = () => {
 
     return (
         <div>
-            <h1>Student information</h1>
+            <h1 className="student">Student information</h1>
             <div className="form">
                 <div className="form-body">
                     <div className="fullname">

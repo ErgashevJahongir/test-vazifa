@@ -39,7 +39,13 @@ function Login({ userId, setUserId }) {
             .then((res) => {
                 const data = res.data.data.data;
                 data.map((user) => {
-                    if (user.username === userName) {
+                    if (
+                        user.username === userName &&
+                        userName !== '' &&
+                        userName !== null &&
+                        password !== '' &&
+                        password !== null
+                    ) {
                         setUserId(user.id);
                         navigate('/', { replace: true });
                     }
@@ -75,6 +81,7 @@ function Login({ userId, setUserId }) {
                         <input
                             className="form__input"
                             type="password"
+                            required
                             id="password"
                             placeholder="Password"
                             value={password}
@@ -88,7 +95,7 @@ function Login({ userId, setUserId }) {
                         className="btn"
                         onClick={(e) => handleSubmit(e)}
                     >
-                        Register
+                        Login
                     </button>
                 </div>
             </div>

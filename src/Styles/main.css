@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -11,4 +15,23 @@ a {
 
 ul li {
     list-style-type: none;
+}
+
+.main__title {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+}
+
+button {
+    color: black;
 }

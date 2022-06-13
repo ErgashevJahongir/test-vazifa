@@ -27,3 +27,8 @@ a.ant-typography {
 .delete {
     color: #f00 !important;
 }
+
+.students {
+    color: #fff;
+    text-align: center;
+}
