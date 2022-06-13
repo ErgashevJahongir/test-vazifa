@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', sans-serifs;
+}
+
+.form__input {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4px;
+    border: 1px solid hsl(0, 0%, 80%);
+    cursor: default;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    outline: 0 !important;
+    position: relative;
+    transition: all 100ms;
+}
+
+.form__input:hover {
+    border-color: hsl(0, 0%, 70%);
+}
+
+.form__input:focus {
+    border: 2px solid #2684ff;
+}
+
+.form__label {
+    width: 100%;
+    padding-bottom: 5px;
+    display: inline-block;
+    font-weight: 500;
+}
