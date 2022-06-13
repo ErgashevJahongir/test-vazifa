@@ -38,18 +38,18 @@ function Login({ userId, setUserId }) {
             .get('https://online-excel-heroku.herokuapp.com/auth/list')
             .then((res) => {
                 const data = res.data.data.data;
-                data.map((user) => {
+                for (let i = 0; i < data.length; i++) {
                     if (
-                        user.username === userName &&
+                        data[i].username === userName &&
                         userName !== '' &&
                         userName !== null &&
                         password !== '' &&
                         password !== null
                     ) {
-                        setUserId(user.id);
+                        setUserId(data[i].id);
                         navigate('/', { replace: true });
                     }
-                });
+                }
             })
             .catch((err) => {
                 console.log(err);

@@ -5,7 +5,8 @@ import Registr from '../auth/Registr';
 import Home from './Home';
 import Layout from './Layout';
 import Student from './Student';
-import StudentsTable, { StudentEdit } from './StudentsTable';
+import StudentEdit from './StudentEdit';
+import StudentsTable from './StudentsTable';
 
 const Root = () => {
     const [userId, setUserId] = useState('');
@@ -15,10 +16,10 @@ const Root = () => {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home userId={userId} />} />
                 <Route path="student" element={<Student />} />
-                {/* <Route
-                path="/edit"
-                element={<StudentEdit studentId={studentId} />}
-            /> */}
+                <Route
+                    path="/edit"
+                    element={<StudentEdit studentId={studentId} />}
+                />
                 <Route
                     path="students"
                     element={<StudentsTable setStudentId={setStudentId} />}

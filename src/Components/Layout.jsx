@@ -8,7 +8,7 @@ const Layout = () => {
             <main>
                 <Outlet />
             </main>
-            <footer>
+            <footer className="layoutFooter">
                 <a href="https://t.me/JahongirErgashev" className="footer">
                     Joha Eragshev
                 </a>
